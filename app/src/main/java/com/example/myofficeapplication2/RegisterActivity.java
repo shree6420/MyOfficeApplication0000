@@ -1,11 +1,13 @@
 package com.example.myofficeapplication2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,16 +20,14 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity  {
-
-
-
-
+    private Context context;
     private EditText editTextName;
     private EditText editTextEmail;
     private EditText editTextPassword;
 
     private Button buttonRegister;
     private TextView textViewLogin;
+    private ImageView imgBack;
 
 
 
@@ -35,20 +35,31 @@ public class RegisterActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        init();
 
+    }
 
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        buttonRegister = (Button) findViewById(R.id. buttonRegister);
-        textViewLogin = (TextView) findViewById(R.id.textViewLogin);
+    private void init(){
+        context = this;
+        editTextName =  findViewById(R.id.editTextName);
+        editTextEmail =  findViewById(R.id.editTextEmail);
+        editTextPassword =  findViewById(R.id.editTextPassword);
+        imgBack = findViewById(R.id.img_back);
+        buttonRegister =  findViewById(R.id. buttonRegister);
+        textViewLogin =  findViewById(R.id.textViewLogin);
 
+        setOnClick();
 
+    }
 
+    private void setOnClick() {
 
-
-
-
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,41 +74,38 @@ public class RegisterActivity extends AppCompatActivity  {
                     registerRequest.setPassword(editTextPassword.getText().toString());
                     registerUser(registerRequest);
 
-
                     Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                     intent.putExtra(" editTextName", (CharSequence) editTextName);
                     intent.putExtra("editTextEmail", (CharSequence) editTextEmail);
                     intent.putExtra(" editTextPassword", (CharSequence) editTextPassword);
 
-
                     startActivity(intent);
 
                 }
             }
+        });
+    }
 
+    private void registerUser(RegisterRequest registerRequest) {
+        Call<RegisterResponse> registerResponseCall = ApiClient.getUserService().registerusers(registerRequest);
+        registerResponseCall.enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                if (response.isSuccessful()) {
 
-            private void registerUser(RegisterRequest registerRequest) {
-                Call<RegisterResponse> registerResponseCall = ApiClient.getUserService().registerusers(registerRequest);
-                registerResponseCall.enqueue(new Callback<RegisterResponse>() {
-                    @Override
-                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                        if (response.isSuccessful()) {
+                    String message = "Registration Successful...";
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                    finish();
+                } else {
+                    String message = "An error occurred please try again Later....";
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+            }
 
-                            String message = "Registration Successful...";
-                            Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                            finish();
-                        } else {
-                            String message = "An error occurred please try again Later....";
-                            Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
-                        }
-                    }
+            @Override
+            public void onFailure(Call<RegisterResponse> call, Throwable t) {
 
-                    @Override
-                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
-
-                    }
-                });
             }
         });
     }

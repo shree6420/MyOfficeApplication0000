@@ -1,12 +1,14 @@
 package com.example.myofficeapplication2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Handler;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity  {
     EditText Username, Password;
     Button Login;
     TextView registerlink;
+    private Context context;
 
     private EditText editTextUsername;
     private EditText editTextPassword;
@@ -30,7 +33,7 @@ public class LoginActivity extends AppCompatActivity  {
     private TextView textViewRegister;
 
     private Button buttonLogin;
-    private TextView txtForgotPassword;
+    private TextView txtForgetpass;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,14 +41,21 @@ public class LoginActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextUsername = findViewById(R.id.editTextUsername);
-        editTextPassword = findViewById(R.id.editTextPassword);
-        Button buttonLogin = findViewById(R.id.buttonLogin);
-        TextView textViewRegister= findViewById(R.id.textViewRegister);
-        TextView txtForgotpassword = findViewById(R.id.txtForgotPassword);
+        init();
+        }
 
+        private void init(){
+            context = this;
+            editTextUsername = findViewById(R.id.editTextUsername);
+            editTextPassword = findViewById(R.id.editTextPassword);
+            buttonLogin = findViewById(R.id.buttonLogin);
+            textViewRegister= findViewById(R.id.textViewRegister);
+            txtForgetpass = findViewById(R.id.txtForgotPassword);
 
+            setOnClick();
+        }
 
+    private void setOnClick() {
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +69,7 @@ public class LoginActivity extends AppCompatActivity  {
                     Toast.makeText(LoginActivity.this,"Username / Password Required", Toast.LENGTH_LONG).show();
                 }else{
 
-                   loginuser();
+                    loginuser();
                 }
 
             }
@@ -68,21 +78,15 @@ public class LoginActivity extends AppCompatActivity  {
         textViewRegister.setOnClickListener(v ->{
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
-            finish();
 
         });
 
-        txtForgotPassword.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        txtForgetpass.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
             startActivity(intent);
-            finish();
         });
 
-
-
-
-        }
-
+    }
 
 
     public void loginuser(){
@@ -99,14 +103,9 @@ public class LoginActivity extends AppCompatActivity  {
                 if(response.isSuccessful()){
                     Toast.makeText(LoginActivity.this,"Login Successful", Toast.LENGTH_LONG).show();
                     LoginResponse loginResponse = response.body();
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            startActivity(new Intent(LoginActivity.this, HomeActivity.class).putExtra("data",loginResponse.getusername()));
-                        }
-                    },700);
+                    if (loginResponse != null){
+                        startActivity(new Intent(LoginActivity.this, HomeActivity.class).putExtra("data",loginResponse.getusername()));
+                    }
 
                 }else{
                     Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_LONG).show();
@@ -125,6 +124,7 @@ public class LoginActivity extends AppCompatActivity  {
 
     }
     private void loginuser(LoginRequest loginRequest){}
+
 
 }
 

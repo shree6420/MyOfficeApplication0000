@@ -3,12 +3,14 @@ package com.example.myofficeapplication2;
 import static android.content.ContentValues.TAG;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,8 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
 
     private Button buttonPwdReset;
+    private Context context;
+    private ImageView imgBack;
     private EditText editTextPwdResetEmail;
 
 
@@ -36,9 +40,25 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgotpassword);
 
+        init();
+    }
+
+    private void init(){
+        context = this;
+        imgBack = findViewById(R.id.img_back);
         editTextPwdResetEmail = findViewById(R.id.editText_password_reset_email);
         buttonPwdReset = findViewById(R.id.button_password_reset);
 
+        setOnClick();
+    }
+
+    private void setOnClick() {
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         buttonPwdReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
