@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name" translatable="false">MyOfficeApplication2</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signup">Signup</string>
+    <string name="welcome_to_the_home_page">Welcome to the Home Page!</string>
+    <string name="state">state</string>
+    <string name="submit">submit</string>
+    <string name="State">State</string>
+    <string name="don_t_have_account_click_here_to_sign_up">Don\'t have account. Click here to sign up</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="quot_already_have_an_account_log_in_quot">\"Already have an account? Log in\"</string>
+    <string name="welcome">welcome</string>
+    <string name="select_state">Select State</string>
+    <string name="select_districts">Select Districts</string>
+
+
+    <string-array name="array_Maharashtra_state">
+        <item>Select State</item>
+        <item>Maharashtra</item>
+    </string-array>
+
+
+    <string-array name="array_default_districts">
+        <item>Select Your District</item>
+    </string-array>
+
+
+    <string-array name="array_maharashtra_districts" tools:ignore="DuplicateDefinition">
+
+        <item>Select Your District</item>
+        <item>Ahmednagar</item>
+        <item>Akola</item>
+        <item>Amravati</item>
+        <item>Aurangabad</item>
+        <item>Beed</item>
+        <item>Bhandara</item>
+        <item>Buldhana</item>
+        <item>Chandrapur</item>
+        <item>Dhule</item>
+        <item>Gadchiroli</item>
+        <item>Gondia</item>
+        <item>Hingoli</item>
+        <item>Jalgaon</item>
+        <item>Jalna</item>
+        <item>Kolhapur</item>
+        <item>Latur</item>
+        <item>Mumbai City</item>
+        <item>Mumbai Suburban</item>
+        <item>Nagpur</item>
+        <item>Nanded</item>
+        <item>Nandurbar</item>
+        <item>Nashik</item>
+        <item>Osmanabad</item>
+        <item>Palghar</item>
+        <item>Parbhani</item>
+        <item>Pune</item>
+        <item>Raigad</item>
+        <item>Ratnagiri</item>
+        <item>Sangli</item>
+        <item>Satara</item>
+        <item>Sindhudurg</item>
+        <item>Solapur</item>
+        <item>Thane</item>
+        <item>Wardha</item>
+        <item>Washim</item>
+        <item>Yavatmal</item>
+    </string-array>
+
+</resources>
