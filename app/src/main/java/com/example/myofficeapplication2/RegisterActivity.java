@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity  {
     private EditText editTextPassword;
 
     private Button buttonRegister;
-    private TextView loginlink;
+    private TextView textViewLogin;
 
 
 
@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity  {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonRegister = (Button) findViewById(R.id. buttonRegister);
-        loginlink = (TextView) findViewById(R.id.loginlink);
+        textViewLogin = (TextView) findViewById(R.id.textViewLogin);
 
 
 
