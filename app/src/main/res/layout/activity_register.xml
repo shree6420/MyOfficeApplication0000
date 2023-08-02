@@ -23,14 +23,12 @@
 
     </RelativeLayout>
 
-
     <LinearLayout
         android:layout_below="@id/rl_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
-
 
         <TextView
 
@@ -43,7 +41,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-
         <EditText
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
@@ -51,7 +48,10 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="2dp"
             android:hint="Enter UserName"
             android:minHeight="48dp"
             android:textSize="16sp" />
@@ -63,7 +63,10 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:hint="Enter Your Email"
+            android:drawablePadding="2dp"
             android:drawableLeft="@drawable/baseline_email_24"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
@@ -76,7 +79,10 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:hint="Enter Your Password"
+            android:drawablePadding="2dp"
             android:drawableLeft="@drawable/baseline_lock_24"
             android:inputType="textPassword"
             android:minHeight="48dp"
@@ -89,13 +95,14 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:hint="Confirm Password"
+            android:drawablePadding="2dp"
             android:drawableLeft="@drawable/baseline_lock_24"
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textSize="16sp" />
-
-
 
         <Button
             android:id="@+id/buttonRegister"
@@ -118,10 +125,6 @@
             android:text="Already have an account? log_in"
             android:textSize="15sp"
             android:textStyle="bold" />
-
-
-
-
 
     </LinearLayout>
 

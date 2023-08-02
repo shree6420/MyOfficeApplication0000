@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="button_submit" type="id"/>
-    <item name="textView_Maharashtra_state" type="id"/>
-    <item name="textView_Maharashtra_districts" type="id"/>
-    <item name="spinner_Maharashtra_districts" type="id" />
-    <item name="buttonSignup" type="id" />
-    <item name="editTextUsername" type="id" />
+
     <item name="spinner_Maharashtra_state" type="id"/>
     <item name="stateSpinner" type="id"/>
     <item name="districtSpinner" type="id"/>

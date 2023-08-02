@@ -81,7 +81,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             String email = params[0];
-            String response = "";
+            StringBuilder response = new StringBuilder();
 
             try {
                 URL url = new URL("localhost/userapi/forgotpassword.php.txt");
@@ -102,10 +102,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                     String line;
                     BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     while ((line = br.readLine()) != null) {
-                        response += line;
+                        response.append(line);
                     }
                 } else {
-                    response = "";
+                    response = new StringBuilder();
                 }
 
                 conn.disconnect();
@@ -113,7 +113,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            return response;
+            return response.toString();
         }
 
         @Override

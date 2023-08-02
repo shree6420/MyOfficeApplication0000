@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity  {
 
     private Button buttonLogin;
     private TextView txtForgetpass;
+    private String username ,password;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -52,23 +53,20 @@ public class LoginActivity extends AppCompatActivity  {
             textViewRegister= findViewById(R.id.textViewRegister);
             txtForgetpass = findViewById(R.id.txtForgotPassword);
 
+
+
             setOnClick();
         }
 
     private void setOnClick() {
 
+        username = editTextUsername.getText().toString().trim();
+        password = editTextPassword.getText().toString().trim();
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-
-                String username = editTextUsername.getText().toString().trim();
-                String password = editTextPassword.getText().toString().trim();
-
-                if(TextUtils.isEmpty(editTextUsername.getText().toString()) || TextUtils.isEmpty(editTextPassword.getText().toString())){
-                    Toast.makeText(LoginActivity.this,"Username / Password Required", Toast.LENGTH_LONG).show();
-                }else{
-
+                if (isValid()){
                     loginuser();
                 }
 
@@ -124,6 +122,17 @@ public class LoginActivity extends AppCompatActivity  {
 
     }
     private void loginuser(LoginRequest loginRequest){}
+
+    private boolean isValid(){
+        if (editTextUsername.getText().toString().trim().isEmpty()){
+            Toast.makeText(context, "Please enter your username", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (editTextPassword.getText().toString().trim().isEmpty()){
+            Toast.makeText(context, "Please enter your password", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 
 
 }

@@ -43,9 +43,7 @@
 
     </LinearLayout>
 
-
-
-            <TextView
+    <TextView
                 android:id="@+id/textView_Maharashtra_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
