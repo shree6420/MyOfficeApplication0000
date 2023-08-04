@@ -84,6 +84,13 @@ public class RegisterActivity extends AppCompatActivity  {
                 }
             }
         });
+
+        textViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context, LoginActivity.class));
+            }
+        });
     }
 
     private void registerUser(RegisterRequest registerRequest) {
