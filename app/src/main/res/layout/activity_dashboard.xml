@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/rl_home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorPink"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu"
+                android:layout_centerVertical="true"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="Dashboard"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@drawable/txt_strock_box"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:text="Select State"/>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:background="@drawable/txt_strock_box"
+                android:textColor="@color/white"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:text="Select District"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/soil_map"
+        android:layout_below="@id/rl_home_toolbar"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

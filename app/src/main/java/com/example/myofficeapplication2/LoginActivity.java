@@ -16,6 +16,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myofficeapplication2.ModelResponse.LoginResponse;
+import com.example.myofficeapplication2.activity.DashboardActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,7 +68,8 @@ public class LoginActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 if (isValid()){
-                    loginuser();
+                    //loginuser();
+                    startActivity(new Intent(context, DashboardActivity.class));
                 }
 
             }
