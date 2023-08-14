@@ -74,14 +74,10 @@ public class DashboardActivity extends AppCompatActivity {
                         if (item.getTitle().equals("Akola")){
                             Glide.with( context )
                                     .load(R.drawable.akola )
-                                    .thumbnail( 0.5f )
-                                    .override( 200, 200 )
                                     .into( imageMap );
                         }else if (item.getTitle().equals("Osmanabad")){
                             Glide.with( context )
                                     .load(R.drawable.osmanbad )
-                                    .thumbnail( 0.5f )
-                                    .override( 200, 200 )
                                     .into( imageMap );
                         }
                         return true;
