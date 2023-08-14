@@ -10,6 +10,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 
+import com.bumptech.glide.Glide;
 import com.example.myofficeapplication2.R;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -65,10 +66,24 @@ public class DashboardActivity extends AppCompatActivity {
                 popup.getMenuInflater()
                         .inflate(R.menu.district_type, popup.getMenu());
 
+
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
 
                         edtSelectDist.setText(item.getTitle());
+                        if (item.getTitle().equals("Akola")){
+                            Glide.with( context )
+                                    .load(R.drawable.akola )
+                                    .thumbnail( 0.5f )
+                                    .override( 200, 200 )
+                                    .into( imageMap );
+                        }else if (item.getTitle().equals("Osmanabad")){
+                            Glide.with( context )
+                                    .load(R.drawable.osmanbad )
+                                    .thumbnail( 0.5f )
+                                    .override( 200, 200 )
+                                    .into( imageMap );
+                        }
                         return true;
                     }
                 });
