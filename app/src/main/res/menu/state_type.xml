@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/state_mh"
+        android:title="Maharashtra" />
+    <item
+        android:id="@+id/state_punjab"
+        android:title="Punjab " />
+    <item
+        android:id="@+id/state_gujrat"
+        android:title="Gujarat " />
+    <item
+        android:id="@+id/state_andra"
+        android:title="Andhra Pradesh" />
+    <item
+        android:id="@+id/state_cg"
+        android:title="Chhattisgarh" />
+
+</menu>

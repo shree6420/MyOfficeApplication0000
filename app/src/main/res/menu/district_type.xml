@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dist_nagpur"
+        android:title="Nagpur" />
+    <item
+        android:id="@+id/dist_wardha"
+        android:title="Wardha" />
+    <item
+        android:id="@+id/dist_amrawati"
+        android:title="Amrawati" />
+
+</menu>
