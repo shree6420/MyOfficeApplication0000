@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.myofficeapplication2.R;
@@ -18,7 +19,8 @@ import com.example.myofficeapplication2.R;
 public class DashboardActivity extends AppCompatActivity {
 
     private Context context;
-    private AutoCompleteTextView edtSelectState, edtSelectDist;
+    private AutoCompleteTextView edtSelectState, edtSelectDist, edtSelectTaluka;
+    private RelativeLayout rlTalukaBox;
     private ImageView imageMap;
     float[] lastEvent = null;
     float d = 0f;
@@ -45,6 +47,9 @@ public class DashboardActivity extends AppCompatActivity {
         context = this;
         edtSelectDist = findViewById(R.id.edt_select_dist);
         edtSelectState = findViewById(R.id.edt_select_state);
+        edtSelectTaluka = findViewById(R.id.edt_select_taluka);
+        rlTalukaBox = findViewById(R.id.rl_taluka_box);
+        rlTalukaBox.setVisibility(View.GONE);
         imageMap = findViewById(R.id.img_view);
         setOnClick();
     }
@@ -73,6 +78,7 @@ public class DashboardActivity extends AppCompatActivity {
                         if (item.getTitle().equals("Maharashtra")){
 
                             edtSelectDist.setVisibility(View.VISIBLE);
+                            rlTalukaBox.setVisibility(View.GONE);
                         }else {
                             edtSelectDist.setVisibility(View.GONE);
                         }
@@ -98,14 +104,46 @@ public class DashboardActivity extends AppCompatActivity {
 
                         edtSelectDist.setText(item.getTitle());
                         if (item.getTitle().equals("Akola")){
+                            rlTalukaBox.setVisibility(View.GONE);
                             Glide.with( context )
                                     .load(R.drawable.akola )
                                     .into( imageMap );
                         }else if (item.getTitle().equals("Osmanabad")){
+                            rlTalukaBox.setVisibility(View.GONE);
                             Glide.with( context )
                                     .load(R.drawable.osmanbad )
                                     .into( imageMap );
+                        }else if (item.getTitle().equals("Wardha")){
+                            rlTalukaBox.setVisibility(View.VISIBLE);
+
                         }
+                        return true;
+                    }
+                });
+
+                popup.show();
+            }
+        });
+
+        edtSelectTaluka.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final PopupMenu popup = new PopupMenu(context, edtSelectTaluka);
+                popup.getMenuInflater()
+                        .inflate(R.menu.taluka_wardha_type, popup.getMenu());
+
+
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        rlTalukaBox.setVisibility(View.VISIBLE);
+                        edtSelectTaluka.setText(item.getTitle());
+
+                        if (item.getTitle().equals("Aarvi")){
+                            Glide.with( context )
+                                    .load(R.drawable.arvi )
+                                    .into( imageMap );
+                        }
+
                         return true;
                     }
                 });
