@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/amrawati_taluka_chandurrailway"
+        android:title="Chandur Railway" />
+
+
+    <item
+        android:id="@+id/amrawati_taluka_chikhladhara"
+        android:title="chikhladhara" />
+
+    <item
+        android:id="@+id/amrawati_taluka_dhamangaon"
+        android:title="Dhamangaon" />
+    <item
+        android:id="@+id/amrawati_taluka_dharni"
+        android:title="Dharni" />
+
+</menu>

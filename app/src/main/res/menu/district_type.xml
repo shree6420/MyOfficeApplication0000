@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dist_ahmednagarr"
+        android:title="Ahmednagar" />
+    <item
+        android:id="@+id/dist_akola"
+        android:title="Akola" />
+    <item
+        android:id="@+id/dist_amravati"
+        android:title="Amravati" />
+    <item
+        android:id="@+id/dist_aurangabad"
+        android:title="Aurangabad" />
+    <item
+        android:id="@+id/dist_beed"
+        android:title="Beed" />
+    <item
+        android:id="@+id/dist_bhandara"
+        android:title="Bhandara" />
+    <item
+        android:id="@+id/dist_buldhana"
+        android:title="Buldhana" />
+    <item
+        android:id="@+id/dist_chandrapur"
+        android:title="Chandrapur" />
+    <item
+        android:id="@+id/dist_dhule"
+        android:title="Dhule" />
+    <item
+        android:id="@+id/dist_gadchiroli"
+        android:title="Gadchiroli" />
+    <item
+        android:id="@+id/dist_gondia"
+        android:title="Gondia" />
+    <item
+        android:id="@+id/dist_hingoli"
+        android:title="Hingoli" />
+    <item
+        android:id="@+id/dist_jalgaon"
+        android:title="Jalgaon" />
+    <item
+        android:id="@+id/dist_jalna"
+        android:title="Jalna" />
+    <item
+        android:id="@+id/dist_kolhapur"
+        android:title="Kolhapur" />
+    <item
+        android:id="@+id/dist_latur"
+        android:title="Latur" />
+    <item
+        android:id="@+id/dist_mumbai_city"
+        android:title="Mumbai City" />
+    <item
+        android:id="@+id/dist_mumbai_Suburban"
+        android:title="Mumbai Suburban" />
+    <item
+        android:id="@+id/dist_nagpur"
+        android:title="Nagpur" />
+    <item
+        android:id="@+id/dist_nanded"
+        android:title="Nanded" />
+    <item
+        android:id="@+id/dist_nandurbar"
+        android:title="Nandurbar" />
+    <item
+        android:id="@+id/dist_nashik"
+        android:title="Nashik" />
+    <item
+        android:id="@+id/dist_osmanabad"
+        android:title="Osmanabad" />
+    <item
+        android:id="@+id/dist_palghar"
+        android:title="Palghar" />
+    <item
+        android:id="@+id/dist_parbhani"
+        android:title="Parbhani" />
+    <item
+        android:id="@+id/dist_pune"
+        android:title="Pune" />
+    <item
+        android:id="@+id/dist_raigad"
+        android:title="Raigad" />
+    <item
+        android:id="@+id/dist_ratnagiri"
+        android:title="Ratnagiri" />
+    <item
+        android:id="@+id/dist_sangli"
+        android:title="Sangli" />
+    <item
+        android:id="@+id/dist_satara"
+        android:title="Satara" />
+    <item
+        android:id="@+id/dist_sindhudurg"
+        android:title="Sindhudurg" />
+    <item
+        android:id="@+id/dist_solapur"
+        android:title="Solapur" />
+    <item
+        android:id="@+id/dist_thane"
+        android:title="Thane" />
+    <item
+        android:id="@+id/dist_wardha"
+        android:title="Wardha" />
+    <item
+        android:id="@+id/dist_yavatmal"
+        android:title="Yavatmal" />
+    <item
+        android:id="@+id/dist_washim"
+        android:title="Washim" />
+
+
+</menu>

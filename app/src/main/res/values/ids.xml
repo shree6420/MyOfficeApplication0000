@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="spinner_Maharashtra_state" type="id"/>
+    <item name="stateSpinner" type="id"/>
+    <item name="districtSpinner" type="id"/>
+    <item name="spinnerStates" type="id"/>
+    <item name="spinnerDistricts" type="id"/>
+    <item name="editText_password_reset_email" type="id"/>
+    <item name="button_password_reset" type="id"/>
+</resources>
