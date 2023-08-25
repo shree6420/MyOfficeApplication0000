@@ -192,7 +192,7 @@ public class DashboardActivity extends AppCompatActivity {
                             Glide.with( context )
                                     .load(R.drawable.dhamangaonelevation )
                                     .into( imageMap );
-                        } else if (item.getTitle().equals("Taluka4")){
+                        } else if (item.getTitle().equals("Dharni")){
                             Glide.with( context )
                                     .load(R.drawable.dharnielevation)
                                     .into( imageMap );
