@@ -120,6 +120,9 @@ public class DashboardActivity extends AppCompatActivity {
 
                         }else if (item.getTitle().equals("Amrawati")) {
                             rlTalukaBox.setVisibility(View.VISIBLE);
+                            Glide.with( context )
+                                    .load(R.drawable.chandurrailwayelevation )
+                                    .into( imageMap );
                         }
                         return true;
                     }
