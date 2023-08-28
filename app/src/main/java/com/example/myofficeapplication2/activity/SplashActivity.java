@@ -1,13 +1,17 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.myofficeapplication2.R;
+import com.example.myofficeapplication2.utils.AppUtils;
+
+public class SplashActivity extends AppCompatActivity {
 
     private Context context;
 
@@ -15,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
         init();
     }
     private void init(){
         context = this;
-        new Handler().postDelayed(new Runnable() {
+        AppUtils.delay(700, new AppUtils.DelayCallback() {
             @Override
-            public void run() {
+            public void afterDelay() {
                 startActivity(new Intent(context, LoginActivity.class));
             }
-        },700);
+        });
     }
 }

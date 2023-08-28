@@ -1,4 +1,4 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.model;
 
 public class State {
     private int id;

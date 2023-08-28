@@ -1,22 +1,21 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myofficeapplication2.utils.ApiClient;
 import com.example.myofficeapplication2.ModelResponse.LoginResponse;
-import com.example.myofficeapplication2.activity.DashboardActivity;
+import com.example.myofficeapplication2.R;
+import com.example.myofficeapplication2.model.LoginRequest;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -104,7 +103,7 @@ public class LoginActivity extends AppCompatActivity  {
                     Toast.makeText(LoginActivity.this,"Login Successful", Toast.LENGTH_LONG).show();
                     LoginResponse loginResponse = response.body();
                     if (loginResponse != null){
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class).putExtra("data",loginResponse.getusername()));
+                        startActivity(new Intent(LoginActivity.this, DashboardActivity.class).putExtra("data",loginResponse.getusername()));
                     }
 
                 }else{

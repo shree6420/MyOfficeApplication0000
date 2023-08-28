@@ -1,4 +1,6 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.webservice;
+
+import com.example.myofficeapplication2.model.User;
 
 import java.util.List;
 import retrofit2.Call;

@@ -1,4 +1,6 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.utils;
+
+import com.example.myofficeapplication2.webservice.UserService;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

@@ -1,6 +1,6 @@
 package com.example.myofficeapplication2.ModelResponse;
 
-import com.example.myofficeapplication2.User;
+import com.example.myofficeapplication2.model.User;
 
 import java.io.Serializable;
 

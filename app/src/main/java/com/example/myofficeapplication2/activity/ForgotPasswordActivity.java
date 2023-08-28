@@ -1,4 +1,4 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.activity;
 
 import static android.content.ContentValues.TAG;
 
@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myofficeapplication2.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

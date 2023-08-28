@@ -1,4 +1,6 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.utils;
+
+import com.example.myofficeapplication2.webservice.RegisterInterface;
 
 import java.io.IOException;
 

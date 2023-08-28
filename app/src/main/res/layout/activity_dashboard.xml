@@ -128,8 +128,7 @@
             android:id="@+id/rl_soilproperties_box"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:visibility="visible">
-
+            android:visibility="gone">
 
             <AutoCompleteTextView
                 android:id="@+id/edt_select_soilproperties"

@@ -1,7 +1,10 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.webservice;
 
 import com.example.myofficeapplication2.ModelResponse.LoginResponse;
 import com.example.myofficeapplication2.ModelResponse.RegisterResponse;
+import com.example.myofficeapplication2.model.RegisterRequest;
+import com.example.myofficeapplication2.model.LoginRequest;
+import com.example.myofficeapplication2.model.User;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

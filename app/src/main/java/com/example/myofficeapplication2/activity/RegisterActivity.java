@@ -1,4 +1,4 @@
-package com.example.myofficeapplication2;
+package com.example.myofficeapplication2.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myofficeapplication2.utils.ApiClient;
 import com.example.myofficeapplication2.ModelResponse.RegisterResponse;
+import com.example.myofficeapplication2.R;
+import com.example.myofficeapplication2.model.RegisterRequest;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -74,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity  {
                     registerRequest.setPassword(editTextPassword.getText().toString());
                     registerUser(registerRequest);
 
-                    Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, DashboardActivity.class);
                     intent.putExtra(" editTextName", (CharSequence) editTextName);
                     intent.putExtra("editTextEmail", (CharSequence) editTextEmail);
                     intent.putExtra(" editTextPassword", (CharSequence) editTextPassword);
